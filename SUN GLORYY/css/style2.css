@@ -1,0 +1,204 @@
+:root {
+    --primary: #b6895b;
+    --bg: #010101;
+}
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+html{
+    scroll-behavior: smooth;
+  }
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg);
+    color: #fff;
+
+}
+
+    /* Navbar */
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.4rem 7%;
+        background-color: rgb(1, 1, 1, 0.8) ;
+        border-bottom: 1px solid #513c28 ;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 9999;
+
+    }
+
+    .navbar .navbar-logo{
+        font-size: 2rem;
+        font-weight: 700;
+        color: #fff;
+        font-style: italic;
+    }
+
+    .navbar .navbar-logo span{
+        color: var(--primary);
+    }
+
+    .navbar .navbar-nav a{
+        color: #fff;
+        display: inline-block;
+        font-size: 1.3rem;
+        margin: 0 1rem;
+    }
+
+    .navbar .navbar-nav a:hover {
+        color: var(--primary);
+    }
+
+    .navbar .navbar-nav a::after {
+        content: '';
+        display: block;
+        padding-bottom: 0.5rem;
+        border-bottom: 0.2rem solid var(--primary);
+        transform: scaleX(0);
+        transition: 0.2s linear;
+    }
+
+    .navbar .navbar-nav a:hover::after{
+        transform: scaleX(0.5);
+    }
+
+    .navbar .navbar-extra a {
+        color: #fff;
+        margin: 0 0.5rem;
+    }
+
+    .navbar .navbar-extra a:hover {
+        color: var(--primary);
+        }
+
+    #hamburger-menu {
+        display: none;
+    }
+
+/* NAVBAR END */
+
+/*  RESERVATION FORM START */
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+    * {
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    }
+    body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-image: url("../foto/tentang-kami.jpg");
+    /* background: rgb(130, 106, 251); */
+    }
+
+    .reservation {
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+    .container {
+    position: relative;
+    max-width: 700px;
+    width: 100%;
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+    .container h3 {
+    font-size: 2rem;
+    color: #333;
+    font-weight: 500;
+    text-align: center;
+    padding-bottom: 2%;
+    }
+    .info {
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: 500;
+    }
+
+    .icon{
+        padding-left: 50%;
+    }
+
+
+    /*Responsive*/
+    @media screen and (max-width: 500px) {
+    .form .column {
+        flex-wrap: wrap;
+    }
+    .form :where(.gender-option, .gender) {
+        row-gap: 15px;
+    }
+}
+/* RESERVATION FORM END */
+
+/* LAPTOP */
+@media screen and (max-width: 1366px){
+    html {
+        font-size: 75%;
+    }
+}
+
+/* TABLET */
+@media screen and (max-width: 768px){
+    html {
+        font-size: 62.5%;
+    }
+
+    #hamburger-menu {
+        display: inline-block;
+    }
+
+    .navbar .navbar-nav {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: #fff;
+        width: 30rem;
+        height: 100vh;
+        transition: 0.3s;
+    }
+
+    .navbar .navbar-nav.active {
+        right: 0;
+    }
+
+    .navbar .navbar-nav a{
+        color: var(--bg);
+        display: block;
+        margin: 1.5rem;
+        padding: 0.5rem;
+        font-size: 2rem;
+    }
+
+    .navbar .navbar-nav a::after{
+        transform-origin: 0 0;
+    }
+
+    .navbar .navbar-nav a:hover::after{
+        transform: scaleX(0.2);
+    }
+}
+
+/* MOBILE */
+@media screen and (max-width: 450px){
+    html {
+        font-size: 75%;
+    }
+}
